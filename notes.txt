@@ -9,20 +9,21 @@ Node cares about the fs, process and the net
 
 Event Driven
 	events are added to an event queue and are processed by javascript
-		types of events are network connections, timeouts, user ations and I/O
-			element.onclick = function(event) {}; //only happens when the event occurs
-				Event Loop
-						it listens, executes callbacks
+	types of events are network connections, timeouts, user ations and I/O
+	element.onclick = function(event) {}; //only happens when the event occurs
+	Event Loop
+		it listens, executes callbacks
 							
-								example:
-									var start = new Date();
-										setTimeout(
-											var end = new Date();
-												console.log(Time elapsed:", end - start, 'ms');
-													}, 500);
+		example:
+		var start = new Date();
+		setTimeout(
+			var end = new Date();
+			console.log(Time elapsed:", end - start, 'ms');
+			}, 500);
 											
-												while (new Date() - start < 1000);
-													//event starts running until after 500 seconds
+		while (new Date() - start < 1000);
+		//event starts running until after 500 seconds
+		
 Non-blocking I/O
 what?
 	whenever you want something that's not from the node process itself, node is going to go do taht other thing and then come back and create an event and handle it that way
@@ -53,32 +54,23 @@ what?
 
 			Asynchronous Programming
 
-				Flow controls
-					task: load files from a directory: 
-							the synchronous way to load files is not good for high concurrency applications
-								
-										var fs = require("fs")
-												
-														fs.readdir(
-																async.js is the most popular libary in node for working with asynchronous code. handles recursions, bookkeeping of callbacks, 
-																		
-																				done is a function given by asynch library
-																						
-																								readFile is asynch because it's slow and has to call an outside thing
-																										
-																											Promises
-
-																											Node Package Manager and npm
-
-																											Require #Modules
-																												var hello = require('./hello.js');
-																													
-																														it's a way to namespace/modularize your code
-																															same scope! vars inside a file are local to that file (function scope_
-																																var hello = require("./hello.js');
-																																	Node wraps every JS file
-																																		var exports = {};
-																																			var module.
-																																				built in libraries - fs, http, net,
-																																					
-																																					JavaScript Scopes: function creates scopes
+			Flow controls
+			task: load files from a directory: 
+			the synchronous way to load files is not good for high concurrency applications
+			var fs = require("fs")
+			fs.readdir(
+			async.js is the most popular libary in node for working with asynchronous code. handles recursions, bookkeeping of callbacks, 
+			done is a function given by asynch library
+			readFile is asynch because it's slow
+			
+			Promises 
+			
+			Require #Module
+			var hello = require('./hello.js');
+			it's a way to namespace/modularize your code within the same scope! vars inside a file are local to that file (function scope_
+			var hello = require("./hello.js');
+			Node wraps every JS file
+			var exports = {}
+			var module.
+			built in libraries - fs, http, net,
+			JavaScript Scopes: function creates scopes
