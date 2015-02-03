@@ -1,0 +1,33 @@
+First Actual Class Feb 2nd, 2015
+
+Handling events in the DOM. JQuery, JavaScript Fundamentals
+We'll be learning nodejs a backend javascript framework.
+It's event driven, non-blocking input and output and is built on Chrome v8
+
+Node cares about the fs, process and the net
+<scripts> care about windows, history and the document.
+
+Event Driven
+	events are added to an event queue and are processed by javascript
+		types of events are network connections, timeouts, user ations and I/O
+			element.onclick = function(event) {}; //only happens when the event occurs
+				Event Loop
+						it listens, executes callbacks
+							
+								example:
+									var start = new Date();
+										setTimeout(
+											var end = new Date();
+												console.log(Time elapsed:", end - start, 'ms');
+													}, 500);
+											
+												while (new Date() - start < 1000);
+													//event starts running until after 500 seconds
+Non-blocking I/O
+what?
+	whenever you want something that's not from the node process itself, node is going to go do taht other thing and then come back and create an event and handle it that way
+		analogy: a kitchen w/ one chef
+			
+			IF you have a blocking I/O, it's like you go to a grocery store and ask for the price and it holds up the line, so there are multiple lines for other customers to go through if they don't wanna wait
+			Node hands it like a mater dei at a restaraunt.it will let you know when it's done.
+			
