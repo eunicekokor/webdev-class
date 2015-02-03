@@ -30,4 +30,55 @@ what?
 			
 			IF you have a blocking I/O, it's like you go to a grocery store and ask for the price and it holds up the line, so there are multiple lines for other customers to go through if they don't wanna wait
 			Node hands it like a mater dei at a restaraunt.it will let you know when it's done.
-			
+			Blocking vs Non-blocking I/O
+
+			nonblocking callback funct
+			//do something asynchronously
+			db.fetch(expensive_query, function(results) {
+					results.forEach(function(result) {
+								console.log(result);
+									});
+			});
+
+			consolte.log("yay!");
+			**in non-blocking, YAY will print out before RESULT**
+
+			blocking callback funct
+			//while we're doing DB request the js engine just stops and waits
+			results.forEach(function(Result {
+					console.log(result);
+			});
+			console.log(" yay!");
+			**in blocking RESULT will print out before YAY**
+
+			Asynchronous Programming
+
+				Flow controls
+					task: load files from a directory: 
+							the synchronous way to load files is not good for high concurrency applications
+								
+										var fs = require("fs")
+												
+														fs.readdir(
+																async.js is the most popular libary in node for working with asynchronous code. handles recursions, bookkeeping of callbacks, 
+																		
+																				done is a function given by asynch library
+																						
+																								readFile is asynch because it's slow and has to call an outside thing
+																										
+																											Promises
+
+																											Node Package Manager and npm
+
+																											Require #Modules
+																												var hello = require('./hello.js');
+																													
+																														it's a way to namespace/modularize your code
+																															same scope! vars inside a file are local to that file (function scope_
+																																var hello = require("./hello.js');
+																																	Node wraps every JS file
+																																		var exports = {};
+																																			var module.
+																																				built in libraries - fs, http, net,
+																																					
+																																					JavaScript Scopes: function creates scopes
